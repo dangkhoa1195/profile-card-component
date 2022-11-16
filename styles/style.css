@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185deg, 75%, 39%);
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 2rem;
+  min-width: 33rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 576px) {
+  .card {
+    min-width: 35rem;
+  }
+}
+.card__background {
+  background-image: url("../images/bg-pattern-card.svg");
+  width: 100%;
+  height: 14rem;
+}
+.card__avatar {
+  border: 0.5rem solid white;
+  border-radius: 50%;
+  margin: -5rem auto;
+  margin-bottom: 2rem;
+}
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.card__title > span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 59%);
+}
+.card__sub-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(227deg, 10%, 46%);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.card hr {
+  background-color: hsl(227deg, 10%, 46%);
+  border: none;
+  color: hsl(227deg, 10%, 46%);
+  height: 1px;
+  opacity: 0.2;
+  width: 100%;
+}
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 4rem;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.stats-item__number {
+  color: hsl(229deg, 23%, 23%);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.stats-item__description {
+  color: hsl(227deg, 10%, 46%);
+  font-size: 1.2rem;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */

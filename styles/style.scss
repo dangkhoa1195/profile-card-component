@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import './variables';
+
+@mixin font-style($font-size: 1.8rem, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+@mixin display-flex(
+  $display: flex,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+body {
+  @include display-flex();
+  background-color: $background-color;
+  font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
+}
+.card {
+  background-color: #fff;
+  border-radius: 2rem;
+  min-width: 33rem;
+  overflow: hidden;
+  @media only screen and (min-width: 576px) {
+    min-width: 35rem;
+  }
+  &__background {
+    background-image: url('../images/bg-pattern-card.svg');
+    width: 100%;
+    height: 14rem;
+  }
+  &__avatar {
+    border: 0.5rem solid white;
+    border-radius: 50%;
+    margin: -5rem auto;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    @include font-style(1.8rem, 700);
+    color: $primary-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    & > span {
+      @include font-style();
+      color: $primary-text-color;
+    }
+  }
+  &__sub-title {
+    @include font-style(1.5rem);
+    color: $secondary-text-color;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  & hr {
+    background-color: $secondary-text-color;
+    border: none;
+    color: $secondary-text-color;
+    height: 1px;
+    opacity: 0.2;
+    width: 100%;
+  }
+  &__stats {
+    @include display-flex(flex, space-between);
+    padding: 2.5rem 4rem;
+  }
+}
+.stats-item {
+  @include display-flex();
+  flex-direction: column;
+  &__number {
+    color: $primary-color;
+    @include font-style(1.8rem, 700);
+  }
+  &__description {
+    color: $secondary-text-color;
+    @include font-style(1.2rem, 400);
+  }
+}
